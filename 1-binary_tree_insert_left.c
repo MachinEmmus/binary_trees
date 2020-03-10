@@ -2,15 +2,15 @@
 /**
  * binary_tree_insert_left - create a new node in the left
  * @parent: Node parent
- * @value: 
+ * @value: value for the node
  * Return: New Node
  */
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 {
 	binary_tree_t *new_node, *tmp;
-	new_node = binary_tree_node(parent, value);
 
-    if (parent->left == NULL)
+	new_node = binary_tree_node(parent, value);
+	if (parent->left == NULL)
 	{
 		new_node->parent = parent;
 		parent->left = new_node;
@@ -24,4 +24,4 @@ binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 		new_node->left = tmp;
 	}
 	return (new_node);
-}   
+}
